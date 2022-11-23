@@ -303,7 +303,6 @@ function Get-AllTenantAddresses {
 
         [Parameter(
             ParameterSetName = 'UseActiveSession',
-            Mandatory = $true,
             Position = 1,
             HelpMessage = 'Use an already connected session.'
         )]

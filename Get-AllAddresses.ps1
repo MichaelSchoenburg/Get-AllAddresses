@@ -344,8 +344,8 @@ function Get-AllTenantAddresses {
             $Mbxs = Get-Recipient
 
             # Classify each entity
-            for ($i = 0; $i -lt $Mbxs.Count -1; $i++) {
-                Log "[$( $i + 1 )/$( $Mbxs.Count - 1 )] $( $TProcessing ) $( $Mbxs[$i].PrimarySmtpAddress )"
+            for ($i = 0; $i -lt $Mbxs.Count; $i++) {
+                Log "[$( $i + 1 )/$( $Mbxs.Count )] $( $TProcessing ) $( $Mbxs[$i].PrimarySmtpAddress )"
 
                 $MbxAdrFiltered = New-Object PSObject
                 $MbxAdrUnfiltered = Get-Recipient $Mbxs[$i].Identity | Select-Object -ExpandProperty EmailAddresses
